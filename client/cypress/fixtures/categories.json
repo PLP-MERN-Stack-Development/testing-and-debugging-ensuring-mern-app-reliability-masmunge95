@@ -1,0 +1,12 @@
+{
+  "categories": [
+    {
+      "_id": "cat_fixture_1",
+      "name": "Technology"
+    },
+    {
+      "_id": "cat_fixture_2",
+      "name": "Health & Wellness"
+    }
+  ]
+}

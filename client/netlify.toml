@@ -1,0 +1,33 @@
+# This file configures Netlify's build and redirect settings.
+
+# --- Build Settings ---
+# Specifies the build command and the directory where the built files are located.
+# Since this file is in the 'client' directory, paths are relative to it.
+[build]
+  command = "npm run build" # The command to build the site
+  publish = "dist" # The directory to publish (relative to 'client')
+
+# --- Redirects and Rewrites ---
+
+# Proxy API requests to the backend server on Render.
+[[redirects]]
+  from = "/api/*"
+  to = "https://mern-stack-integration-masmunge95.onrender.com/api/:splat"
+  status = 200 # Rewrite rule (proxy)
+
+# Proxy image uploads to the backend server.
+[[redirects]]
+  from = "/uploads/*"
+  to = "https://mern-stack-integration-masmunge95.onrender.com/uploads/:splat"
+  status = 200 # Rewrite rule (proxy)
+
+# SPA fallback: Redirect all other requests to index.html for client-side routing.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Add any custom headers here. For example, Content Security Policy.

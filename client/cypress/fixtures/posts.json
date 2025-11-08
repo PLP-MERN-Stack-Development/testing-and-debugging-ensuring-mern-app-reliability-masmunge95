@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "_id": "post_fixture_1",
+      "slug": "a-deep-dive-into-react-hooks",
+      "title": "A Deep Dive into React Hooks",
+      "author": "Jane Doe",
+      "createdAt": "2025-10-26T10:00:00.000Z",
+      "excerpt": "Explore the power and flexibility of React Hooks to write cleaner and more reusable component logic.",
+      "category": {
+        "_id": "cat_fixture_1",
+        "name": "Technology"
+      },
+      "featuredImage": "/uploads/test-image.jpg",
+      "status": "published"
+    },
+    {
+      "_id": "post_fixture_2",
+      "slug": "mindfulness-in-the-digital-age",
+      "title": "Mindfulness in the Digital Age",
+      "author": "John Smith",
+      "createdAt": "2025-10-25T14:30:00.000Z",
+      "excerpt": "Learn techniques to stay present and reduce stress while navigating our hyper-connected world.",
+      "category": {
+        "_id": "cat_fixture_2",
+        "name": "Health & Wellness"
+      },
+      "featuredImage": null,
+      "status": "published"
+    }
+  ]
+}

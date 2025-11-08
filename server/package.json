@@ -1,0 +1,46 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "jest --config ../jest.config.js --runInBand",
+    "test:unit": "jest --config ../jest.config.js --selectProjects server --testPathPatterns=tests/unit --runInBand",
+    "test:integration": "jest --config ../jest.config.js --selectProjects server --testPathPatterns=tests/integration --runInBand",
+    "test:coverage": "jest --config ../jest.config.js --selectProjects server --coverage --coverageDirectory=\"<rootDir>/server/coverage\" --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.23",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^8.19.3",
+    "multer": "^2.0.2",
+    "svix": "^1.81.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^10.3.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}
